@@ -64,14 +64,7 @@
 				
 				//无论是第一种还是第二种都需要遍历
 				$checkbox.prop('checked',function(index ,old){
-//					console.log(index);
-//					console.log(old);
-//					console.log(this);//js
-					//$(this)   jq对象
-					//console.log(this.checked)
-					//$(this).closest('tr')
 					this.checked?$(this).closest('tr').removeClass('selected'):$(this).closest('tr').addClass('selected')
-					//return !this.checked
 					return !old
 				})
 				pAll()//判断全选按钮的状态
