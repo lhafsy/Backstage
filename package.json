@@ -31,5 +31,14 @@
   "dependencies": {
     "extract-text-webpack-plugin": "^2.1.0",
     "react-addons-css-transition-group": "^15.4.2"
-  }
+  },
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lhafsy/Backstage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lhafsy/Backstage/issues"
+  },
+  "homepage": "https://github.com/lhafsy/Backstage#readme"
 }
