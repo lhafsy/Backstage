@@ -7,11 +7,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 	entry: [//唯一入口文件
 		'webpack/hot/only-dev-server',
-		'./src/app.js'
+		'./src/app.jsx'
 	],
 	output: {//输出目录
 		path: path.resolve(__dirname, './dist'),//打包后的js文件存放的地方
-		filename: 'bundle.js',//打包后输出的js的文件名
+		filename: 'Backstage.js',//打包后输出的js的文件名
 		publicPath: '/dist/'
 	},
 	module: {
@@ -44,9 +44,9 @@ module.exports = {
 	  		'process.env': {
 		    	'NODE_ENV': '"production"'
 	  		}
-		})    
+		})
 	],
 	devServer: {
 		stats: 'errors-only'
-	}	
+	}
 };
