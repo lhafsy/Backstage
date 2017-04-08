@@ -8,14 +8,8 @@ var AppComponent = React.createClass({
 		// 路由嵌套
 		return (
 		  <div>
-       <h1>index</h1>
-       <ul>
-       <li><Link to="/increase">增加</Link></li>
-       <li><Link to="/delete">删除</Link></li>
-       <li><Link to="/query">查询</Link></li>
-       <li><Link to="/modify">修改</Link></li>
-       <p><li><Link to="/">增加</Link></li></p>
-       </ul>
+       <h1>增加</h1>
+
        </div>
 		);
 	}

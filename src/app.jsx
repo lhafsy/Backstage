@@ -10,30 +10,6 @@ var currency = require('../currency.css');
 var ReactRouter = require("react-router");
 var {Router, Route, hashHistory, Link, IndexRoute, browserHistory} = ReactRouter;
 
-// var RootComponent = React.createClass({
-// 	render() {
-// 		return (
-// 			<div>
-// 				<h1>index</h1>
-// 				<ul>
-// 				  	<li><Link to="/move">电影</Link></li>
-// 				  	<li><Link to="/music">音乐</Link></li>
-// 				</ul>
-// 			</div>
-// 		);
-// 	}
-// });
-
-// ReactDOM.render(
-// 	(<Router history={hashHistory}>
-// 		<Route path="/" component={RootComponent}/>
-// 		<Route path="/move" component={increase}/>
-// 		<Route path="/music" component={modify}/>
-// 	</Router>)
-// 	, document.getElementById('content')
-// );
-
-
 
 
 // 路由嵌套
@@ -53,14 +29,41 @@ var RootComponent = React.createClass({
     render() {
       return (
        <div>
-       <h1  className="aa">index</h1>
-       <ul>
-       <li><Link to="/increase">增加</Link></li>
-       <li><Link to="/delete">删除</Link></li>
-       <li><Link to="/query">查询</Link></li>
-       <li><Link to="/modify">修改</Link></li>
-       <div >1</div>
-       </ul>
+         <div className="top">
+           <h3 className="topLeft">后台管理系统</h3>
+
+           <div className="topRight">
+           <span >超级管理员</span>
+           </div>
+         </div>
+
+         <div className="content box">
+            <div className="contentLeft">
+             <ul>用户信息
+               <li><Link to="/increase">增加</Link></li>
+               <li><Link to="/delete">删除</Link></li>
+               <li><Link to="/query">查询</Link></li>
+               <li><Link to="/modify">修改</Link></li>
+             </ul>
+              <ul>房源信息
+               <li><Link to="/increase">增加</Link></li>
+               <li><Link to="/delete">删除</Link></li>
+               <li><Link to="/query">查询</Link></li>
+               <li><Link to="/modify">修改</Link></li>
+             </ul>
+               <ul>经纪人
+               <li><Link to="/increase">增加</Link></li>
+               <li><Link to="/delete">删除</Link></li>
+               <li><Link to="/query">查询</Link></li>
+               <li><Link to="/modify">修改</Link></li>
+             </ul>
+             </div>
+              <div id="contentRight">
+
+               </div>
+
+         </div>
+
        </div>
        );
     }
@@ -69,14 +72,18 @@ var RootComponent = React.createClass({
 ReactDOM.render(
 	(<Router history={hashHistory}>
 		<Route path="/" component={RootComponent}/>
-		<Route path="/increase" component={increase}/>
+    </Router>)
+	, document.getElementById('contentLeft')
+  );
+
+ReactDOM.render(
+  (<Router history={hashHistory}>
+    <Route path="/increase" component={increase}/>
     <Route path="/delete" component={delete1}/>
     <Route path="/query" component={query}/>
     <Route path="/modify" component={modify} />
-
-
     </Router>)
-	, document.getElementById('content')
+  , document.getElementById('contentRight')
   );
 
 function enterMusicFun(nextState, replace, next){
