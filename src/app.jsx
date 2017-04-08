@@ -5,6 +5,7 @@ var increase = require('./component/increase.jsx');
 var delete1 = require('./component/delete.jsx');
 var query = require('./component/query.jsx');
 var modify = require('./component/modify.jsx');
+var currency = require('../currency.css');
 
 var ReactRouter = require("react-router");
 var {Router, Route, hashHistory, Link, IndexRoute, browserHistory} = ReactRouter;
@@ -52,7 +53,7 @@ var RootComponent = React.createClass({
     render() {
       return (
        <div>
-       <h1>index</h1>
+       <h1  className="aa">index</h1>
        <ul>
        <li><Link to="/increase">增加</Link></li>
        <li><Link to="/delete">删除</Link></li>
