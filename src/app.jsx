@@ -4,8 +4,6 @@ var ReactDOM = require('react-dom');
 var increase = require('./component/increase.jsx');
 var delete1 = require('./component/delete.jsx');
 var query = require('./component/query.jsx');
-
-
 var modify = require('./component/modify.jsx');
 
 var ReactRouter = require("react-router");
