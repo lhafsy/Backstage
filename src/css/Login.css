@@ -1,0 +1,76 @@
+@charset "utf-8";
+/*reset*/
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,pre,form,input,textarea,th,td,select{margin: 0;padding: 0;}
+em{font-style: normal;}
+li{list-style: none;}
+a{text-decoration: none;color:#666;}
+img{border:none;}
+table{border-collapse: collapse;}
+textarea{resize: none;overflow: hidden;}
+
+
+/*public*/
+body{font-family: '微软雅黑';color: #666;}
+.wrap{
+	width: 1263px;
+	margin:0 auto;
+}
+.clear{
+	zoom:1;
+}
+.clear:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.Login{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:rgba(0,0,0,0.3);
+
+}
+.Msg{
+	width: 400px;
+	height: 300px;
+	background-color:#fafafa;
+	border-radius:5px;
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.Msg div{
+
+	
+	text-align:center;
+	
+}  
+.Msg div:nth-child(1){
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	border-bottom:1px solid #ccc;
+}
+.Msg div:nth-child(2){
+
+	width: 100%;
+	height: 150px;
+
+}
+.Msg div:nth-child(2) input{
+	height: 25px;
+	width: 250px;
+	padding-left:5px;
+	border-radius:5px;
+	margin-top: 20px;
+}
+.Msg div:nth-child(3) input{
+    diplay:inline-block;
+    border-radius:5px;
+    padding:10px 30px;
+    color:#fff;
+    background-color:#39ac6a;
+}
