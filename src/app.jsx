@@ -5,7 +5,9 @@ var increase = require('./component/increase.jsx');
 var delete1 = require('./component/delete.jsx');
 var query = require('./component/query.jsx');
 var modify = require('./component/modify.jsx');
-var currency = require('../currency.css');
+var currency = require('./css/currency.css');
+var login = require('./component/Login.js');
+
 
 var ReactRouter = require("react-router");
 var {Router, Route, hashHistory, Link, IndexRoute, browserHistory} = ReactRouter;
@@ -59,7 +61,7 @@ var RootComponent = React.createClass({
              </ul>
              </div>
               <div id="contentRight">
-
+                {this.props.children}
                </div>
 
          </div>
@@ -71,22 +73,25 @@ var RootComponent = React.createClass({
 
 ReactDOM.render(
 	(<Router history={hashHistory}>
-		<Route path="/" component={RootComponent}/>
+		<Route path="/" component={RootComponent}>
+      <Route path="/increase" component={increase}/>
+      <Route path="/delete" component={delete1}/>
+      <Route path="/query" component={query}/>
+      <Route path="/modify" component={modify} />
+    </Route>
+    <Route path="login" component={login} />
+
+
+
+
+
     </Router>)
-	, document.getElementById('contentLeft')
+	, document.getElementById('content')
   );
 
-ReactDOM.render(
-  (<Router history={hashHistory}>
-    <Route path="/increase" component={increase}/>
-    <Route path="/delete" component={delete1}/>
-    <Route path="/query" component={query}/>
-    <Route path="/modify" component={modify} />
-    </Router>)
-  , document.getElementById('contentRight')
-  );
 
-function enterMusicFun(nextState, replace, next){
-	replace('/move');
-	next();
-}
+
+// function enterMusicFun(nextState, replace, next){
+// 	replace('/login');
+// 	next();
+// / }

@@ -49,9 +49,9 @@
 }
 #contentRight{
   width: 75%;
-  float:right;
+    float:right;
   height:43.75rem;
-  display: inline-block;
-
+   display: inline-block;
+   background: red
 }
 

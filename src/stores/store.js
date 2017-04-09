@@ -3,12 +3,17 @@ var $ = require('jquery');
 var assign = require('object-assign');
 
 var MainStore = assign({}, EventEmitter.prototype, {
-	items: [],
+
 	getAll: function(){
 		return this.items;
 	},
-	addNewItem: function(text){
-		this.items.push(text);
+	login: function(){
+		$.ajax({
+			url:'http://localhost:88/'+'',
+			method:'post',
+			data:{},
+
+		})
 	},
 	emitChange: function(){
 		this.emit('change');

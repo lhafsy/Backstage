@@ -18,16 +18,36 @@ server.listen(666, 'localhost', function(err, result) {
 var path = require('path');
 var express = require('express');
 var app = express();
-
+var mysql = require('mysql');
+var server = mysql.createConnection({
+    user: 'root',
+    database: 'shijianfeishi',
+    password: ''
+});
+var bodyParser = require('body-parser');
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.use(express.static(path.join(__dirname, '/')));
 
-app.get('/customer', function(req, res){
-  res.send('customer page');
+app.get('/lha', function(request, response) {
+        //连接mysql
+    server.connect(function(error, results) {
+        if (error) {
+            console.log('connection Error:' + error);
+            return
+        };
+        console.log('connect to MySQL');
+    })
+    server.query("use `shijianfeishi`");
+    console.log(111)
+    server.query("select * from `home`", function(err, rs, fields) {
+        if (err) {
+            console.log(err);
+        } else {
+            response.send(rs);
+            console.log(rs)
+        };
+    });
 });
-app.get('/admin', function(req, res){
-  res.send('admin page');
+var appServer = app.listen(888, function() {
+    console.log(appServer.address());
 });
-
-var appServer = app.listen(888, function(){
-  console.log(appServer.address());
-})
