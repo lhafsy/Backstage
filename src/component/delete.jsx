@@ -1,5 +1,3 @@
-
-
 var $ = require("jquery");
 var React = require('react');
 var ReactRouter = require("react-router");
@@ -25,17 +23,15 @@ var AppComponentCopy = React.createClass({
         self.setState({value:msg});
         // console.log(this);
         // console.log(self);
-        console.log(1)
       }
     })
   },
   render:function(){
-   console.log(2)
    for(var key in this.state.value[0]){
     this.props.columns.push(key);
   }
-  console.log(this.props.columns)
-  console.log(this.state.value[0])
+  // console.log(this.props.columns)
+  // console.log(this.state.value[0])
 
   return (
    <thead>

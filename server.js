@@ -47,6 +47,17 @@ app.get('/lha', function(request, response) {
             console.log(rs)
         };
     });
+
+    server.query("use `shijianfeishi`");
+    console.log(111)
+    server.query("select * from `users`", function(err, rs, fields) {
+        if (err) {
+            console.log(err);
+        } else {
+            response.send(rs);
+            console.log(rs)
+        };
+    });
 });
 var appServer = app.listen(888, function() {
     console.log(appServer.address());

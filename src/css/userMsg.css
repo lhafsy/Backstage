@@ -1,0 +1,17 @@
+.lgy_UserMsg{
+	width: 50rem;
+	height: 30rem;
+	background: #eee;
+}
+.lgy_User{
+	width: 35%;
+	padding: 1rem 3rem;
+	float: left;
+}
+.lgy_User > span{
+	width: 3rem;
+}
+.lgy_User > input{
+	float: right;
+	
+}

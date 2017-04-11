@@ -5,9 +5,11 @@ var increase = require('./component/increase.jsx');
 var delete1 = require('./component/delete.jsx');
 var query = require('./component/query.jsx');
 var modify = require('./component/modify.jsx');
-var currency = require('./css/currency.css');
 var login = require('./component/Login.js');
-
+var userMsg = require('./component/userMsg.jsx');
+// 样式
+var currency = require('./css/currency.css');
+var common = require('./css/common.css');
 
 var ReactRouter = require("react-router");
 var {Router, Route, hashHistory, Link, IndexRoute, browserHistory} = ReactRouter;
@@ -35,7 +37,7 @@ var RootComponent = React.createClass({
            <h3 className="topLeft">后台管理系统</h3>
 
            <div className="topRight">
-           <span >超级管理员</span>
+           <span ><Link to="/userMsg">超级管理员</Link></span>
            </div>
          </div>
 
@@ -78,6 +80,7 @@ ReactDOM.render(
       <Route path="/delete" component={delete1}/>
       <Route path="/query" component={query}/>
       <Route path="/modify" component={modify} />
+      <Route path="/userMsg" component={userMsg} />
     </Route>
     <Route path="login" component={login} />
 
