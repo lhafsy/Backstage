@@ -21,8 +21,8 @@ var app = express();
 var mysql = require('mysql');
 var server = mysql.createConnection({
     user: 'root',
-    database: 'shijianfeishi',
-    password: ''
+    database: 'home',
+    password: 'dujian120'
 });
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -37,7 +37,7 @@ app.get('/lha', function(request, response) {
         };
         console.log('connect to MySQL');
     })
-    server.query("use `shijianfeishi`");
+    server.query("use `home`");
     console.log(111)
     server.query("select * from `home`", function(err, rs, fields) {
         if (err) {
