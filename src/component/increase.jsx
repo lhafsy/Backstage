@@ -9,7 +9,10 @@ var AppComponent = React.createClass({
   },
   componentDidMount:function(){
     var self =this
-    console.log(self)
+
+
+
+
     $.ajax({
       url:'http://localhost:888/lha',
       type: "GET",

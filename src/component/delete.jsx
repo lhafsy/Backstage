@@ -1,5 +1,3 @@
-
-
 var $ = require("jquery");
 var React = require('react');
 var ReactRouter = require("react-router");
